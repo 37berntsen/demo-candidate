@@ -10,11 +10,9 @@ Textdomain: kinsta
 License: GPLv2
 */
 
-// Custom Candidate Post Type
 function create_posttype() {
  
     register_post_type( 'Candidate',
-    // CPT Options
         array(
             'labels' => array(
                 'name' => __( 'Candidates' ),
@@ -28,5 +26,4 @@ function create_posttype() {
         )
     );
 }
-// Hooking up our function to theme setup
 add_action( 'init', 'create_posttype' );
